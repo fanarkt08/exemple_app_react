@@ -4,5 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ArticleController;
 
-Route::get('/', [IndexController::class, 'index'])->name('home');;
-Route::get('/article/{id}', [ArticleController::class, 'show'])->name('article.details');;
+Route::get('/', [IndexController::class, 'index'])->name('home');
+Route::get('/article/{id}', [ArticleController::class, 'show'])->name('article.details');
+
