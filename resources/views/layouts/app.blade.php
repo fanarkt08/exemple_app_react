@@ -6,6 +6,7 @@
         <title>
             @yield('title')
         </title>
+        <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/png">
     </head>
     <body>
         @include('partials.header')
