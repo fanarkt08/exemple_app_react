@@ -1,5 +1,5 @@
 <!-- resources/views/components/article.blade.php -->
 <article class="article">
-    <h2>{{ $title }}</h2>
+    <h3>{{ $title }}</h3>
     <p>{{ $description }}</p>
 </article>
