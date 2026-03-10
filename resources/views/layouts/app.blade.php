@@ -7,6 +7,7 @@
             @yield('title')
         </title>
         <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/png">
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
         @include('partials.header')
