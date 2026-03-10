@@ -1,4 +1,6 @@
-<div>
-    <!-- Waste no more time arguing what a good man should be, be one. - Marcus Aurelius -->
-    <h1>Page non trouvée</h1>
-</div>
+@extends('layouts.app')
+
+@section('title', 'not-found')
+@section('content')
+    <h2>Page non trouvée</h2>
+@endsection
