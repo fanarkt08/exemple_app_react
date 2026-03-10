@@ -11,7 +11,7 @@
 
         <x-article 
             :title="$article['title']"
-            :description="$article['description']"
+            :description="\Illuminate\Support\Str::limit($article['description'], 30)"
         />
 
     @endforeach
