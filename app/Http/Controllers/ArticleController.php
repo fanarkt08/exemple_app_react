@@ -11,15 +11,15 @@ class ArticleController extends Controller
     {
         $article = Article::find($id);
 
-        return view("pages.article-details", [
-            "id" => $id,
-            "title" => $article?->title,
-            "description" => $article?->description
-        ]);
+        if ($article){
+            return view("pages.article-details", $article);
+        }
+
+        return redirect()->route("home");
     }
     public function create()
     {
-        $new_articles = [
+        $newArticles = [
             [
                 'title' => 'L’IA soigne mieux',
                 'description' => "L'intelligence artificielle aide les médecins à diagnostiquer plus vite."
@@ -34,8 +34,8 @@ class ArticleController extends Controller
             ]
         ];
 
-        foreach ($new_articles as $new_article){
-            Article::create($new_article);
+        foreach ($newArticles as $newArticle){
+            Article::create($newArticle);
         }
 
         return redirect()->route("/");
@@ -63,6 +63,6 @@ class ArticleController extends Controller
             $article->delete();
         }
 
-        return redirect()->route("/");
+        return redirect()->route("home");
     }
 }
