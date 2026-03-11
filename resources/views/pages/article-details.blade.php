@@ -4,6 +4,9 @@
 
 @section('content')
     <h2>Article portant l’identifiant {{ $article->id }}</h2>
-    <h3>{{ $article->title }}</h3>
-    <h3>{{ $article->description }}</h3>
+
+    <x-article 
+        :title="$article->title"
+        :description="$article->description"
+    />
 @endsection
