@@ -12,10 +12,12 @@ class ArticleController extends Controller
         $article = Article::find($id);
 
         if ($article){
-            return view("pages.article-details", $article);
+            return view("pages.article-details", [
+                'article' => $article
+            ]);
         }
 
-        return redirect()->route("home");
+        return "Article introuvable";
     }
     public function create()
     {
@@ -38,7 +40,7 @@ class ArticleController extends Controller
             Article::create($newArticle);
         }
 
-        return redirect()->route("/");
+        return "Articles créés";
     }
     public function edit($id)
     {
@@ -63,6 +65,6 @@ class ArticleController extends Controller
             $article->delete();
         }
 
-        return redirect()->route("home");
+        return "Article supprimer";
     }
 }

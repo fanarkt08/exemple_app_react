@@ -11,10 +11,10 @@
             @break
         @endif
 
-        <a href="{{ route('article.details', $article['id']) }}">
+        <a href="{{ route('articles.details', $article->id) }}">
             <x-article 
-                :title="$article['title']"
-                :description="Str::limit($article['description'], 30)"
+                :title="$article->title"
+                :description="Str::limit($article->description, 30)"
             />
         </a>
 
